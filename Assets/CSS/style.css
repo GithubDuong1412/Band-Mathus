@@ -1,0 +1,552 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Class Chung */
+html{
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --color-black : #000;
+    --color-white: #fff;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.mt-32{
+    margin-top: 32px !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn{
+    display: inline-block;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: 5px;
+    padding: 10px 25px;
+    text-decoration: none;
+    cursor: pointer;    
+}
+
+.btn:hover{
+    border: 2px solid #ddd;
+    background-color: #ddd;
+    color: #000;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.333333%;
+}
+
+/* ----------------- CSS cho phần main ----------------- */
+/* #main {
+    
+} */
+/* ----------------- CSS cho phần header ----------------- */
+#header {
+    height: 50px;
+    background-color: var(--color-black);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    position: relative;
+}
+#nav > li > a{
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 20px;
+    display: block;
+}
+
+#nav > li:hover > a ,
+#nav .subnav li:hover a{
+    color: var(--color-black);
+    background-color: #ccc;
+}
+
+#nav , .subnav{
+    list-style-type: none;
+}
+
+/* --- Nav -> Subnav --- */
+#nav .subnav{
+    display: none;
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav a{
+    color: var(--color-black);
+    padding: 0 14px ;
+    line-height: 39px;
+    min-width: 150px;
+}
+
+/* --- icon narow down (More) --- */
+
+#nav .nav-narow-more{
+    font-size: 14px;
+}
+
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .search-btn{
+    float: right;
+    padding: 0 30px;
+}
+
+#header .search-btn:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#header .search-icon{
+    font-size: 22px;
+    color: var(--color-white);
+    line-height: 50px;
+}
+
+
+/* ----------------- CSS cho phần slider ----------------- */
+/* #slider {
+    margin-top: 50px;
+    padding-top: 50%;
+    position: relative;
+    /* background: url('/Assets/Image/chicago.jpg') top center / cover no-repeat;  */
+
+    /* width: -webkit-fill-available; */
+/* =============== Banner - Slider Animation =============== */
+
+.slider-img-animation{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+img.slider-img-animation:not(:first-child){
+    display: none;
+}
+
+.btn-change{
+    position: absolute;
+    width: 6%;
+    transform: translateY(-30em);
+    cursor: pointer;
+}
+#next{
+    right: 0;
+}
+#prev{
+    left: 0;
+}
+
+
+/* ==================== END - SLIDER ANIMATION ======================  */
+
+
+/* .img.move {
+    width: 100%;
+    height: 100%;
+}
+
+img.move:not(:first-child){
+    display: none;
+} */
+
+/* #slider .text-slider{
+    position: absolute;
+    color: var(--color-white);
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-show{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-slogan{
+    font-size: 15px;
+    margin-top: 20px;
+} */
+
+/* CSS cho phần content */
+#content .section{
+    width: 800px;
+    /* max-width: 100%; */
+    padding: 64px 10px 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .heading {
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#content .sub-heading{
+    font-size: 15px;
+    padding-top: 25px;
+    text-align: center;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+#content .text{
+    font-size: 15px;
+    padding-top: 25px;
+    justify-content: center;
+    text-align: justify;
+    line-height: 1.45;
+}
+
+
+/* --- Member in Band ---  */
+#content .member-list{
+    margin-top: 32px;
+}
+
+#content .member-items{
+    text-align: center;
+}
+
+#content .member-name{
+    font-size: 15px;
+
+}
+
+#content .member-img{
+    margin-top: 15px;
+    height: 200px;
+    width: 154px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Tour Dates - section */
+.tour-section{
+    background-color: var(--color-black);
+    color : var(--color-white);
+}
+
+.tickets-list{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.tickets-list li{
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 19px;
+}
+
+.tickets-list .sold-out{
+    font-size: 15px;
+    background: red;
+    color: var(--color-white);
+    padding: 3px 8px;
+    margin-left: 14px;
+}
+
+.tickets-list .quantity{
+    float: right;
+    height: 24px;
+    width: 24px;
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    border-radius: 50%;
+}
+
+
+
+/* .place-img{
+    text-align: center;
+} */
+
+/* --- Place --- */
+
+.place-list{
+    margin-top: 14px;
+}
+
+.place-img{
+    display: block;
+    width: 100%;
+    height: 220px;
+}
+
+.place-img:hover{
+    opacity: 0.5;
+}
+
+.place-body{
+    font-size: 15px;
+    padding: 16px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.place-heading{
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.place-time{
+    margin: 15px 0;
+    color: #757575;
+}
+
+.place-desc{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+
+/* ---Modal - lệnh Buy tickets */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: var(--color-white);
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 300px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--color-white);
+    letter-spacing: 10px;
+}
+
+.modal-header .mohe-icon{
+    padding-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-white);
+    padding: 14px;
+    opacity: 0.78;
+    cursor: pointer;
+}
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body{
+    padding: 16px;
+}
+
+.modal-label{
+    display: block;
+    font-size: 15px;
+    margin: 16px 0;
+}
+
+.modal-input {
+    width: 100%;
+    border: 2px solid #ddd;
+    padding: 9px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#buy-tickets {
+    width: 100%;
+    background: #009688;
+    border: none;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover{
+    background-color: aqua;
+    color: var(--color-black);
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a{
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-110px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Form */
+.contact-content{
+    margin-top: 48px;
+    padding-bottom: 32px;
+}
+
+.contact-info {  
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info a:hover{
+    color: red;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.contact-form .btn{
+    font-size: 15px;
+}
+
+/* --Map Section-- */
+.map-section img{
+    width: 100%;
+}
+
+/* CSS cho phần footer */
+#footer {
+    margin: 60px 16px 70px;
+    text-align: center;
+    font-size: 15px;
+    color: #757575;
+}
+
+#footer .socials-list{
+    font-size: 24px;
+    color: #757575;
+    margin-bottom: 25px;
+}
+
+#footer .socials-list a{
+    text-decoration: none;
+    color: #757575;
+}
+
+#footer .link-footer a:hover,
+#footer .socials-list a:hover{
+    color: #2196F3;
+}
+#footer .link-footer a{
+    color: #757575;
+}
+
